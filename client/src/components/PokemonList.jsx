@@ -12,8 +12,8 @@ export function PokemonList() {
     loadPokemon();
   }, []);
   return (
-    <div className="background-container">
-      <h1>Pokemon List</h1>
+    <div className="grid">
+      <h1 className="font-bold text-2xl">Pokemon List</h1>
       <ul>
         {Pokemon.map((pokemon) => (
           <PokeCard key={pokemon.id} pokemon={pokemon} />

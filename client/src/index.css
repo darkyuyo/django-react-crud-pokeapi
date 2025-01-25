@@ -1,10 +1,6 @@
-body {
-  background-color: white;
-  color: black;
-  font-family: "Roboto", sans-serif;
-}
+@import "tailwindcss";
 
-.background-container {
+.background {
   background-image: url("https://wallpapers.com/images/hd/all-pokemon-pictures-fjz6e54pbvcalv68.jpg"); /* Ruta de la imagen */
   background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
   background-repeat: no-repeat; /* Evita repeticiones */
@@ -13,17 +9,23 @@ body {
   opacity: 0.8; /* Ajusta la opacidad de todo el fondo */
   width: 100%; /* Asegura que cubra todo el ancho */
   height: 100vh; /* Asegura que cubra la altura de la ventana */
+  position: fixed; /* Fija el fondo en la ventana */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca el fondo detrás de otros elementos */
 }
-.background-container-create {
-  background-image: url("https://wallpapers.com/images/hd/all-pokemon-pictures-fjz6e54pbvcalv68.jpg"); /* Ruta de la imagen */
-  background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
-  background-repeat: no-repeat; /* Evita repeticiones */
-  background-position: center; /* Centra la imagen */
-  opacity: 0.8; /* Ajusta la opacidad de todo el fondo */
-  width: 100%; /* Asegura que cubra todo el ancho */
-  height: 100vh; /* Asegura que cubra la altura de la ventana */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  opacity: 1; /* Ajusta la opacidad de todo el fondo */
+}
+.white-text {
+  color: white;
+}
+.blue-text {
+  color: blue;
 }

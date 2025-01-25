@@ -7,11 +7,17 @@ const PokeApi = axios.create({
 export const getAllPokemon = async () => {
   return PokeApi.get("/");
 };
+export const getPokemon = async (id) => {
+  return PokeApi.get(`/${id}/`);
+};
 
 export const createPokemon = async (pokemon) => {
   return PokeApi.post("/", pokemon);
 };
 
 export const deletePokemon = async (id) => {
-  return PokeApi.delete(`/${id}`);
+  return PokeApi.delete(`/${id}/`);
+};
+export const updatePokemon = async (id, pokemon) => {
+  return PokeApi.put(`/${id}/`, pokemon);
 };
